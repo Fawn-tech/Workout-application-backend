@@ -1,8 +1,3 @@
-"""Seed the workout database with example data.
-
-Run once after migrations:
-    python -m server.seed
-"""
 from datetime import date
 
 from server import create_app, db
@@ -74,9 +69,9 @@ def seed():
         db.session.commit()
 
         print()
-        print(f"✅ Seeded {Exercise.query.count()} exercises")
-        print(f"✅ Seeded {Workout.query.count()} workouts")
-        print(f"✅ Seeded {WorkoutExercise.query.count()} workout_exercises")
+        print(f" !! Seeded {Exercise.query.count()} exercises")
+        print(f" !! Seeded {Workout.query.count()} workouts")
+        print(f" !! Seeded {WorkoutExercise.query.count()} workout_exercises")
 
 
 if __name__ == '__main__':
