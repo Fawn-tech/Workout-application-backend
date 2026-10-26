@@ -18,7 +18,7 @@ def get_exercise(id):
     exercise = Exercise.query.get_or_404(id)
 
     data = exercise_schema.dump(exercise)
-    # Add the reverse relationship: which workouts reference this exercise
+    # Added the reverse relationship: which workouts reference this exercise
     data['workouts'] = [
         {
             "id": w.id,
